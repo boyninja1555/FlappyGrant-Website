@@ -15,7 +15,7 @@ export function MobileNavBar({
 
     return (
         <>
-            <Button onClick={() => setOpen(!open)}>Menu</Button>
+            <Button onClick={() => setOpen(!open)} className="md:hidden">Menu</Button>
 
             {open ? (
                 <div className="w-full h-screen top-0 left-0 fixed z-60" onClick={() => setOpen(false)}>
