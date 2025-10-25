@@ -1,0 +1,23 @@
+a:not(.override),
+.hyperlink {
+	display: inline;
+	@apply text-blue-500;
+	position: relative;
+}
+
+a:not(.override)::after,
+.hyperlink::after {
+	content: "";
+	width: 0;
+	height: .15em;
+	@apply bg-blue-500;
+	bottom: -.2em;
+	left: 0;
+	position: absolute;
+	transition: width .3s ease;
+}
+
+a:not(.override):hover::after,
+.hyperlink:hover::after {
+	width: 100%;
+}
