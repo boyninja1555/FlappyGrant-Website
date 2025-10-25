@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Icon from "@/assets/logos/icon_2000x2000.png"
 
-const startYear = process.env.START_YEAR
+const startYear = process.env.NEXT_PUBLIC_START_YEAR
 
 export function Footer() {
     const year = new Date().getFullYear().toString()
