@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
+import Screenshot from "@/assets/screenshots/in-game-1.png"
 import "@/styles/global.css"
 
 const roboto = Roboto({
@@ -14,6 +15,13 @@ export function generateMetadata(): Metadata {
 	return {
 		title: "FlappyGrant",
 		description: "An actually good Flappy Bird spin-off",
+		openGraph: {
+			images: [Screenshot.src],
+		},
+		twitter: {
+			card: "summary_large_image",
+			images: [Screenshot.src],
+		},
 	}
 }
 
