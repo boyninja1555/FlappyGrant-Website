@@ -1,6 +1,14 @@
+import { Metadata } from "next"
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { DownloadButton, DownloadLatest } from "./page.clients"
 import { listVersions } from "@/lib/download"
+
+export function generateMetadata(): Metadata {
+    return {
+        title: "Download FlappyGrant",
+        description: "All downloads for FlappyGrant",
+    }
+}
 
 export default async function DownloadsPage() {
     let versions = await listVersions()
