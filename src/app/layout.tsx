@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 import { NavBar } from "@/components/nav-bar"
 import { Footer } from "@/components/footer"
 import "@/styles/global.css"
@@ -29,6 +30,7 @@ export default function RootLayout({
 				<NavBar bottom={<Footer />}>
 					{children}
 				</NavBar>
+				<Analytics />
 			</body>
 		</html>
 	)
