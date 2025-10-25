@@ -1,4 +1,4 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { DownloadButton, DownloadLatest } from "./page.clients"
 import { listVersions } from "@/lib/download"

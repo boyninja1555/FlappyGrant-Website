@@ -18,6 +18,10 @@ export function NavBar({
             path: "/downloads",
             label: "Downloads",
         },
+        {
+            path: "/web",
+            label: "Web Edition",
+        },
     ]
 
     return (
@@ -42,6 +46,8 @@ export function NavBar({
                             </Link>
                         </li>
                     ))}
+
+                    <li><a href="https://boyninja1555.itch.io/flappygrant" target="_blank">Legacy Edition</a></li>
                 </ul>
             </nav>
         </>
