@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { MobileNavBar } from "./nav-bar.clients"
 import Icon from "@/assets/logos/icon_2000x2000.png"
 
 export function NavBar({
@@ -24,6 +25,13 @@ export function NavBar({
         },
     ]
 
+    const outLinks: LinkConfig[] = [
+        {
+            path: "https://boyninja1555.itch.io/flappygrant",
+            label: "Legacy Edition",
+        },
+    ]
+
     return (
         <>
             <main className="mx-10 py-16 min-h-screen">
@@ -38,7 +46,7 @@ export function NavBar({
                     <span>FlappyGrant</span>
                 </Link>
 
-                <ul className="flex items-center gap-4">
+                <ul className="hidden md:flex items-center gap-4">
                     {links.map((link: LinkConfig, index: number) => (
                         <li key={index}>
                             <Link href={link.path}>
@@ -47,8 +55,16 @@ export function NavBar({
                         </li>
                     ))}
 
-                    <li><a href="https://boyninja1555.itch.io/flappygrant" target="_blank">Legacy Edition</a></li>
+                    {outLinks.map((link: LinkConfig, index: number) => (
+                        <li key={index}>
+                            <a href={link.path}>
+                                {link.label}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
+
+                <MobileNavBar links={links} outLinks={outLinks} />
             </nav>
         </>
     )
